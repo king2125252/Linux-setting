@@ -1,0 +1,39 @@
+set nocompatible 
+syntax enable
+syntax on 
+set number 
+set relativenumber 
+set t_Co=256 
+
+set tabstop=4 
+set shiftwidth=4 
+set expandtab 
+
+set autoindent 
+set ruler 
+set backspace=2 
+set history=1000 
+set formatoptions+=r 
+filetype indent on 
+
+set hlsearch 
+set incsearch 
+
+set cursorline 
+highlight CursorLine cterm=NONE ctermbg=240 ctermfg=NONE 
+set background=dark 
+set showmode 
+set showmatch 
+
+set backup 
+set writebackup 
+set backupdir=~/.vim/backup//
+set undodir=~/.vim/undo// 
+set undofile 
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP 
+
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
