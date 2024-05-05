@@ -8,7 +8,7 @@ set guicursor=i:block "在插入模式下使用光標方塊"
 
 "key mapping"
 "{mode}{nore 為是否遞歸}map"
-inoremap jj <ESC> "將jj映射為<ESC> 退出insert模式"
+inoremap jj <ESC>:<backspace> "將jj映射為<ESC> 退出insert模式"
 nnoremap <F2> m "將F2映射切換書籤"
 
 set showmarks "開啟書籤視覺提示"

@@ -22,7 +22,6 @@ highlight CursorLine cterm=NONE ctermbg=240 ctermfg=NONE
 set background=dark 
 set showmode 
 set showmatch 
-set scrolloff=10
 
 set easymotion 
 set scrolloff=10
@@ -30,7 +29,7 @@ set scrolloff=10
 set keep-english-in-normal 
 
 set guicursor=i:block 
-inoremap jj <ESC> 
+inoremap jj <ESC>:<backspace>
 nnoremap <F2> m 
 
 set showmarks 

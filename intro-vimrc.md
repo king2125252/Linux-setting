@@ -55,6 +55,7 @@ inoremap ' ''<ESC>i
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap { {}<ESC>i
+inoremap jj <ESC>:<backspace>
 " inoremap  triger_char  mapping_str"
 " 映射指令     觸發字元     映射字串"
 " 註：<LEFT> 為向右鍵字元，<CR>代表換行，<ESC>跳出"
