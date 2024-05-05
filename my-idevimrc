@@ -1,0 +1,35 @@
+set nocompatible 
+syntax enable
+syntax on 
+set number 
+set relativenumber 
+set t_Co=256 
+
+set tabstop=4 
+set shiftwidth=4 
+set expandtab 
+
+set autoindent 
+set ruler 
+set backspace=2 
+set history=1000 
+
+set hlsearch 
+set incsearch 
+
+set cursorline 
+highlight CursorLine cterm=NONE ctermbg=240 ctermfg=NONE 
+set background=dark 
+set showmode 
+set showmatch 
+
+set easymotion 
+set scrolloff=10
+
+set keep-english-in-normal 
+
+set guicursor=i:block 
+inoremap jj <ESC> 
+nnoremap <F2> m 
+
+set showmarks 
