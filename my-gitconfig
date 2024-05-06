@@ -1,0 +1,39 @@
+[credential]
+	helper = store
+[user]
+	name = 
+	password = 
+[diff]
+    tool = vimdiff
+[difftool]
+	prompt = false
+[difftool "vimdiff"]
+    cmd = vimdiff $LOCAL $REMOTE -c 'wincmd w'
+
+[core]
+    editor = vim
+
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+
+[color "diff"]
+    meta = yellow
+    frag = magenta
+    old = red
+    new = green
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color]
+    ui = auto
