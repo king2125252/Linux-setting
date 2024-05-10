@@ -35,8 +35,8 @@
     new = green
 
 [color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
+    current = green reverse
+    local = white
+    remote = yellow
 [color]
     ui = auto
