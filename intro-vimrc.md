@@ -60,3 +60,9 @@ inoremap jj <ESC>:<backspace>
 " 映射指令     觸發字元     映射字串"
 " 註：<LEFT> 為向右鍵字元，<CR>代表換行，<ESC>跳出"
 " 另外inoremap後面無法再使用"雙引號來註解"
+
+"netrw setting
+let g:netrw_banner=0 "取消顯示netrw上方顯示教學"
+let g:netrw_liststyle=3 "樹形結構"
+let g:netrw_winsize=25 "設定netrw Lexplore 視窗大小"
+nnoremap <space>e <cmd>:Lex<cr>
