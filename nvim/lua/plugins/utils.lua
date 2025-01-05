@@ -18,6 +18,7 @@ return {
     },
     {
         "windwp/nvim-autopairs",
+        event = "VeryLazy",
         opts = {
             enable_check_bracket_line = false,
         },
@@ -42,12 +43,14 @@ return {
     },
     {
         "kamykn/spelunker.vim",
+        event = "VeryLazy",
         config = function()
             vim.g.spelunker_check_type = 2
         end
     },
     {
         "ellisonleao/glow.nvim",
+        event = "VeryLazy",
         config = true,
         cmd = "Glow"
     },
@@ -67,10 +70,12 @@ return {
     },
     {
         "folke/which-key.nvim",
+        event = "VeryLazy",
         config = true,
     },
     {
         "echasnovski/mini.ai",
+        event = "VeryLazy",
         config = true,
     },
     {

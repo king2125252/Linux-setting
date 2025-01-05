@@ -1,5 +1,7 @@
 return {
     "neovim/nvim-lspconfig",
+    cmd = { "Mason", "Neoconf" },
+    event = { "BufReadPost", "BufNewFile" },
     dependencies = {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
@@ -69,15 +71,14 @@ return {
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
         require("mason-lspconfig").setup({
             ensure_installed = vim.tbl_keys(servers),
-            handlers = {
-                function(server_name)
-                    require("lspconfig")[server_name].setup {
-                        settings = servers[server_name],
-                        on_attach = on_attach,
-                        capabilities = capabilities
-                    }
-                end,
-            }
         })
+        for server, config in pairs(servers) do
+            require("lspconfig")[server].setup(
+                vim.tbl_deep_extend("keep",
+                    { on_attach = on_attach, capabilities = capabilities },
+                        config
+                )
+            )
+        end
     end
 }
