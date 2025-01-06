@@ -42,6 +42,8 @@ option.wrap = true
 -- 用 :vsplit 開啟檔案是在右邊
 -- 預設是左邊
 option.splitright = true
+-- 複製到系統的剪貼簿
+option.clipboard:append("unnamedplus")
 
 -- Buffer Settings --
 buffer.fileencoding = "utf-8"
@@ -66,3 +68,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- 同步系統剪貼簿
 vim.keymap.set({ "v", "n" }, "<leader>y", "\"+y")
+
+-- 使用終端機
+vim.keymap.set('n', 'tm', ':term<CR>')  -- 在普通模式下打開終端
+vim.keymap.set('t', '<ESC>', [[<C-\><C-n>]]) -- 在終端模式下返回普通模式

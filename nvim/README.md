@@ -98,3 +98,55 @@ export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 brew install make
 make --version
 ```
+
+## 5. windows ocaml install
+- https://ocaml.org/docs/ocaml-on-windows
+```bash
+winget install Git.Git OCaml.opam
+opam --version
+opam install ocaml-lsp-server
+which ocamllsp
+```
+
+## 套件url
+- https://github.com/neovim/neovim
+- https://lazy.folke.io/
+- https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#option-3-unofficial-chocolatey-or-scoop-repositories
+- https://github.com/folke/tokyonight.nvim?tab=readme-ov-file
+- https://github.com/nvim-lualine/lualine.nvim
+- https://github.com/utilyre/barbecue.nvim
+- https://github.com/akinsho/bufferline.nvim
+- https://github.com/lukas-reineke/indent-blankline.nvim 
+- https://github.com/lewis6991/gitsigns.nvim
+- https://github.com/goolord/alpha-nvim?tab=readme-ov-file
+- https://github.com/RRethy/vim-illuminate
+- https://github.com/nvim-telescope/telescope.nvim
+- https://github.com/nvim-telescope/telescope-fzf-native.nvim
+- https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua
+- https://github.com/nvim-treesitter/nvim-treesitter 
+- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+- https://github.com/rhysd/accelerated-jk
+- https://github.com/folke/persistence.nvim
+- https://github.com/windwp/nvim-autopairs
+- https://github.com/ethanholz/nvim-lastplace
+- https://github.com/folke/flash.nvim
+- https://github.com/kamykn/spelunker.vim
+- https://github.com/ellisonleao/glow.nvim
+- https://github.com/nvim-neo-tree/neo-tree.nvim
+- https://github.com/folke/which-key.nvim
+- https://github.com/echasnovski/mini.ai
+- https://github.com/echasnovski/mini.comment
+- https://github.com/s1n7ax/nvim-window-picker
+- https://neovim.io/doc/user/lsp.html
+- https://github.com/neovim/nvim-lspconfig
+- https://github.com/williamboman/mason.nvim
+- https://github.com/williamboman/mason-lspconfig.nvim
+- https://github.com/folke/neoconf.nvim
+- https://github.com/folke/neodev.nvim
+- https://github.com/j-hui/fidget.nvim?tab=readme-ov-file#options 
+- https://github.com/nvimdev/lspsaga.nvim
+- https://github.com/hrsh7th/nvim-cmp
+- https://github.com/FledgeXu/NeovimZero2Hero/blob/main/lua/plugins/cmp.lua
+- https://github.com/rafamadriz/friendly-snippets
+- https://github.com/L3MON4D3/LuaSnip
+- https://github.com/folke/lazy.nvim
