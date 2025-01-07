@@ -6,8 +6,8 @@ local global = vim.g
 option.showmode = false
 option.expandtab = true
 option.backspace = { "indent", "eol", "start" }
-option.tabstop = 4
-option.shiftwidth = 4
+option.tabstop = 2
+option.shiftwidth = 2
 option.shiftround = true
 option.autoindent = true
 option.smartindent = true
@@ -60,8 +60,8 @@ vim.keymap.set({ "n", "i", "v" }, "<Right>", "<Nop>")
 vim.keymap.set({ "n", "i", "v" }, "<Up>", "<Nop>")
 vim.keymap.set({ "n", "i", "v" }, "<Down>", "<Nop>")
 
-vim.keymap.set("n", "<A-Tab>", "<cmd>bNext<CR>", { silent = true})
-vim.keymap.set("n", "<leader>bc", "<cmd>bd<CR")
+vim.keymap.set("n", "<leader><Tab>", "<cmd>bNext<CR>", { silent = true})
+vim.keymap.set("n", "<leader>q", "<cmd>bd<CR>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
