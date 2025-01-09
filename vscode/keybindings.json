@@ -1,0 +1,62 @@
+// Place your key bindings in this file to override the defaults
+// >Preferences: open Keyboard Shortcuts (JSON)
+[
+  {
+    "key": "tab",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  {
+    "key": "shift+tab",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  {
+    "key": "shift+k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "g+shift+d",
+    "command": "editor.action.revealDeclaration",
+    "when": "editorHasDeclarationProvider && editorTextFocus"
+  },
+  {
+    "key": "gd",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "workbench.actions.view.problems",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus"
+  },
+  // 在檔案側邊欄用 'a' 建立新檔案
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  // 在檔案側邊欄用 'd' 刪除檔案或資料夾
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  // 在檔案側邊欄用 'r' 重命名檔案或資料夾
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+]

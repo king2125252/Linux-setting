@@ -1,0 +1,248 @@
+{
+  // ctrl + , open file
+  "editor.formatOnSave": false,
+  // 設定游標為不閃爍
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "line",
+  "editor.fontSize": 16,
+  // 設定縮排為2個空格
+  "editor.tabSize": 2,
+  //讓空格or看不到的字元顯示 dot(.)
+  "editor.renderWhitespace": "all",
+  //內容不會超過一頁面,但不是換行
+  "editor.wordWrap": "on",
+  // 啟用插入空格
+  "editor.insertSpaces": true,
+  "editor.trimAutoWhitespace": true,
+  "editor.emptySelectionClipboard": false,
+  // 讓編輯器不要去自動檢視縮進
+  "editor.detectIndentation": false,
+  //terminal 在 windows 設定為 WSL
+  "terminal.integrated.defaultProfile.windows": "WSL",
+  //關閉或檔案托放時的確認對話框，允許直接托放文件不會彈出視窗
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "remote.SSH.remotePlatform": {
+    //rn是使用Linux
+    "rn": "linux"
+  },
+
+  //vim Setting
+  // 設定插入模式為線形游標
+  "vim.cursorStylePerMode.insert": "line",
+  // 設定正常模式為區塊游標
+  "vim.cursorStylePerMode.normal": "block",
+  //vim模式複製時，也同步到系統剪貼簿
+  "vim.useSystemClipboard": true,
+  //vim search 顯示 highlight
+  "vim.hlsearch": true,
+  // vim 快速移動
+  "vim.easymotion": true,
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["s"],
+      "after": ["<leader>", "<leader>", "s"]
+    },
+    {
+      "before": ["<leader>", "<Tab>"],
+      "commands": [":bNext"]
+    },
+    {
+      "before": ["<leader>", "`"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": [":bd"]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"] // 尋找文件
+    },
+    {
+      "before": ["<leader>", "f", "g"],
+      "commands": ["workbench.action.findInFiles"] // 全局搜索
+    },
+    {
+      "before": ["<leader>", "<space>"],
+      "commands": ["workbench.action.showAllEditors"] // 打開的緩衝區
+    },
+    {
+      "before": ["<leader>", "f", "h"],
+      "commands": ["workbench.action.showCommands"] // 命令幫助
+    },
+    {
+      "before": ["<leader>", "?"],
+      "commands": ["workbench.action.openRecent"] // 最近文件
+    },
+    {
+      "before": ["<leader>", "/"],
+      "commands": ["actions.find"] // 當前文件搜索
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"] // 開關側邊欄
+    },
+    {
+      "before": ["<leader>", "l", "f"],
+      "commands": ["editor.action.formatDocument"] // 格式化檔案
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["revealInExplorer"] // 在文件欄 focus當前文件
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": [":noh"] // 取消高亮
+    },
+    {
+      "before": ["<leader>", "a"],
+      "commands": ["workbench.action.toggleActivityBarVisibility"] // 控制左側活動欄位顯示及隱藏
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.toggleStatusbarVisibility"] // 控制下方狀態顯示及隱藏
+    },
+  ],
+  // vim visual 模式下
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"] // 增加縮進
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"] // 減少縮進
+    },
+  ],
+  "vim.autoindent": true,
+  "vim.relativenumber": true,
+  "vim.wildmenu": true, // 在命令行(:)有提示字元
+  "vim.ignorecase": true, // 忽略大小寫
+  "vim.smartcase": true, // 智能大小寫匹配
+  "vim.cursorline": true, // 高亮光標所在行
+  "vim.useCtrlKeys": true,
+  // vim ctrl 不覆蓋系統快捷鍵
+  "vim.handleKeys": {
+    "<C-a>": true,
+    "<C-f>": false,
+    "<C-p>": false
+  },
+  // vim 的 easymotion 插件的高亮字符前景色
+  "vim.easymotionMarkerForegroundColorOneChar": "#DF5452",
+  // 程式碼區域的橫豎的高亮條顯示
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": true,
+  "editor.bracketPairColorization.enabled": true,
+
+  // 開啟 vim surround 快速單引號 雙引號
+  "vim.surround": true,
+  // extension 推薦 忽略
+  "extensions.ignoreRecommendations": true,
+  // 視窗的縮放程度
+  "window.zoomLevel": 1.0,
+  //關閉麵包屑
+  "breadcrumbs.enabled": false,
+  // 開啟文件時的 close 圖標可見性
+  "workbench.editor.tabActionCloseVisibility": false,
+  // 作用域頂部 sticky
+  "editor.stickyScroll.enabled": true,
+  // click 一次就可以打開文件 不需要按兩次
+  "workbench.editor.enablePreview": false,
+  // 讓游標更絲滑
+  "editor.cursorSmoothCaretAnimation": "on",
+  // html tag 重新命名會同步
+  "editor.linkedEditing": true,
+
+  "editor.suggestSelection": "first", // 模擬 completeopt=menuone,noselect
+  "workbench.colorCustomizations": {
+    // 啟用 termguicolors 類似效果
+    // "editorCursor.foreground": "#ffb6c1",
+    "editor.lineHighlightBackground": "#292e42",
+    "statusBar.background": "#1e1e1e",
+    "statusBar.foreground": "#9b9b8f",
+    "statusBar.border": "#333a48"
+  },
+  // 滑鼠在右側才會顯示小地圖
+  "editor.minimap.autohide": true,
+  // 在滾動中不要隱藏滑鼠位置
+  "editor.hideCursorInOverviewRuler": false,
+  // 不隱藏 scroll bar
+  "editor.scrollbar.horizontal": "visible",
+  "editor.scrollbar.vertical": "visible",
+  // 右上標題欄的提示
+  "workbench.layoutControl.enabled": false,
+  // 高亮同名的單字
+  "editor.selectionHighlight": true,
+  "vim.signcolumn": "yes", // 永遠顯示git狀態
+  "window.title": "${activeEditorShort}", // 顯示當前文件名於標題
+  "editor.renderLineHighlight": "all", // 顯示光標所在行
+  "editor.quickSuggestionsDelay": 50, // 設置更新延遲
+  "vim.splitright": true, // 窗口分割時新窗口在右側
+  "editor.copyWithSyntaxHighlighting": true, // 開啟複製內容帶高亮
+  "files.encoding": "utf8", // 默認文件編碼設置為 UTF-8
+  "files.autoGuessEncoding": true, // 自動檢測文件編碼（適用於打開非 UTF-8 文件）
+
+  // git settings
+  "git.enableCommitSigning": true,
+  "git.confirmSync": false,
+
+  //Prettier Setting
+  //一行內最多可容納的字元
+  "prettier.printWidth": 800,
+  //使用單引號，如果用雙引號會轉為單引號
+  "prettier.singleQuote": true,
+  // 再多行結構，最後一行是否加入逗號
+  "prettier.trailingComma": "none",
+  // 確保每一行都有分號
+  "prettier.semi": true,
+  // 針對所有支援的檔案類型設定 Prettier 為格式化工具
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Python 可以選擇性地使用 Prettier 或保留其他格式化工具
+  "[python]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.lineNumbers": "relative"
+}
