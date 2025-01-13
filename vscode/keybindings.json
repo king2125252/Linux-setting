@@ -43,19 +43,19 @@
   },
   // 在檔案側邊欄用 'a' 建立新檔案
   {
-    "key": "a",
+    "key": "shift+a",
     "command": "explorer.newFile",
     "when": "explorerViewletVisible && filesExplorerFocus"
   },
   // 在檔案側邊欄用 'd' 刪除檔案或資料夾
   {
-    "key": "d",
+    "key": "shift+d",
     "command": "deleteFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   // 在檔案側邊欄用 'r' 重命名檔案或資料夾
   {
-    "key": "r",
+    "key": "shift+r",
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },

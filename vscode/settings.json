@@ -18,13 +18,14 @@
   // 讓編輯器不要去自動檢視縮進
   "editor.detectIndentation": false,
   //terminal 在 windows 設定為 WSL
-  "terminal.integrated.defaultProfile.windows": "WSL",
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
   //關閉或檔案托放時的確認對話框，允許直接托放文件不會彈出視窗
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "remote.SSH.remotePlatform": {
-    //rn是使用Linux
-    "rn": "linux"
+    "rn": "linux",
+    "ai": "linux",
+    "rn-myweb": "linux"
   },
 
   //vim Setting
@@ -148,9 +149,7 @@
   "vim.surround": true,
   // extension 推薦 忽略
   "extensions.ignoreRecommendations": true,
-  // 視窗的縮放程度
-  "window.zoomLevel": 1.0,
-  //關閉麵包屑
+  "window.zoomLevel": 1,
   "breadcrumbs.enabled": false,
   // 開啟文件時的 close 圖標可見性
   "workbench.editor.tabActionCloseVisibility": false,
@@ -217,10 +216,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -242,7 +241,13 @@
   },
   // Python 可以選擇性地使用 Prettier 或保留其他格式化工具
   "[python]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "ms-python.black-formatter"
   },
-  "editor.lineNumbers": "relative"
+  "editor.lineNumbers": "relative",
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  }
 }

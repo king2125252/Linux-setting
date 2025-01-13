@@ -1,35 +1,110 @@
-set nocompatible 
+" Extensions
+Plugin 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'peservim/nerdtree'
+Plug 'machakann/vim-highlightedyank'
+
 syntax enable
-syntax on 
-set number 
-set relativenumber 
-set t_Co=256 
-
-set tabstop=4 
-set shiftwidth=4 
-set expandtab 
-
-set autoindent 
-set ruler 
-set backspace=2 
-set history=1000 
-
-set hlsearch 
-set incsearch 
-
-set cursorline 
-highlight CursorLine cterm=NONE ctermbg=240 ctermfg=NONE 
-set background=dark 
-set showmode 
-set showmatch 
-
-set easymotion 
+set t_Co=256
+set incsearch
+set showmode
+set ruler
+set backspace=2
 set scrolloff=10
+set nocompatible           " 禁用兼容模式
+set relativenumber         " 顯示相對行號
+set number                 " 顯示絕對行號
+set hlsearch               " 搜索時高亮匹配
+set ignorecase             " 忽略大小寫
+set smartcase              " 智能大小寫匹配
+set cursorline             " 高亮當前行
+set autoindent             " 自動縮排
+set expandtab              " 將 tab 替換為空格
+set tabstop=2              " 設置 tab 寬度為 2
+set shiftwidth=2           " 設置自動縮排的寬度為 2
+set wrap                   " 啟用換行
+set wildmenu               " 命令菜單補全
+set splitright             " 窗口分割時新窗口在右側
+set clipboard=unnamedplus  " 使用系統剪貼簿
+set background=dark        " 設置深色主題
+set signcolumn=yes         " 永遠顯示 Git 標誌欄
+set surround
+set keep-english-in-normal
 
-set keep-english-in-normal 
+" Key Mapping
+let mapleader = " "
+map <leader>s <Plug>(easymotion-s)
 
-set guicursor=i:block 
-inoremap jj <ESC>:<backspace>
-nnoremap <F2> m 
+" map <leader>r <Action>(RenameElement)
 
-set showmarks 
+" Which-key
+set which-key
+set notimeout
+
+" normal mode
+" 切換到下一個 buffer
+nmap <leader><Tab> :bnext<CR>
+" 切換到上一個 buffer
+nmap <leader>` :bprevious<CR>
+" 關閉當前 buffer
+nmap <leader>q :bd<CR>
+
+ " 快速查找文件
+nnoremap <leader>ff :action GotoFile<CR>
+" 全局搜索
+nnoremap <leader>fg :action FindInPath<CR>
+"打開命令面板
+nnoremap <leader>fh :action GotoAction<CR>
+" 顯示打開的 buffer
+nnoremap <leader><space> :ls<CR>
+" 清除搜索高亮
+nnoremap <leader>h :nohlsearch<CR>
+" 最近打開文件
+nnoremap <leader>? :action RecentFiles<CR>
+"當前文件搜尋
+nnoremap <leader>/ :action Find<CR>
+" 開關側邊欄
+nnoremap <leader>e  :NERDTreeToggle<CR>
+" Shift+A 創建文件
+let g:NERDTreeMapNewFile = 'A'
+" Shift+R 重命名文件或目錄
+let g:NERDTreeMapMenu = 'R'
+" Shift+D 刪除文件或目錄
+let g:NERDTreeMapDelete = 'D'
+" 格式化當前文件
+nnoremap <leader>lf :action ReformatCode<CR>
+" 在側邊欄聚焦當前文件
+nnoremap <leader>f :action SelectIn<CR>
+" g+Shift+D 跳轉到聲明
+nnoremap g<S-D> :action GotoDeclaration<CR>
+" gd 跳轉到定義
+nnoremap gd :action GotoDefinition<CR>
+
+" visual mode
+vmap J :m '>+1<CR>gv=gv          " 視覺模式下向下移動選中行
+vmap K :m '<-2<CR>gv=gv          " 視覺模式下向上移動選中行
+vmap > >gv                       " 增加縮排
+vmap < <gv                       " 減少縮排
+
+" insert mode
+inoremap jj <ESC>:<backspace> " jj進入 normal mode
+inoremap <Tab> <C-n> " Tab 選擇下一個建議
+inoremap <S-Tab> <C-p> " Shift+Tab 選擇上一個建議
+
+
+" 顯示提示氣泡 沒用
+nnoremap <S-K> :action ShowQuickDoc<CR>
+" 跳轉到聲明
+nnoremap g<S-D> :action GotoDeclaration<CR>
+" 跳轉到定義
+nnoremap gd :action GotoDefinition<CR>
+" 快速修復
+nnoremap <C-K> :action ShowIntentionActions<CR>
+" 問題面板 沒用
+nnoremap <C-C> :action ShowProblems<CR>
+" 重命名符號
+nnoremap <C-N> :action RenameElement<CR>
+" 檔案側邊欄操作 沒用
+nnoremap <S-A> :action NewElement<CR>
+nnoremap <S-D> :action SafeDelete<CR>
+nnoremap <S-R> :action RenameElement<CR>
